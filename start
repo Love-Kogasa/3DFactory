@@ -1,0 +1,30 @@
+#!/bin/env bash
+clear
+
+echo -e "\e[1;35m3DFactory 生成裸眼3D视频工具"
+echo -e "\e[4;35m# https://github.com/Love-Kogasa/3DFactory"
+echo -e "\e[4;35m# https://github.com/hailong29/3DFactory"
+echo ""
+echo -e "\e[1;32m[1]\e[0m 生成视频"
+echo -e "  \e[1;36m 生成视频，包含用于快速聚焦的eyes(mark.png)"
+echo -e "\e[1;32m[2]\e[0m 生成纯3D视频"
+echo -e "  \e[1;36m 生成纯裸眼3D视频"
+echo -e "\e[1;32m[3]\e[0m eyes在影片内部"
+echo -e "  \e[1;36m 生成视频，但是eyes在影片内部"
+echo -e "\e[1;32m[任意键]\e[0m 退出"
+echo -e "  \e[1;36m 简单的退出"
+echo ""
+echo -e "\e[1;34m当前目录$(pwd)"
+echo -e "请选择操作 #\e[0m \c"
+read dowhat
+
+if(( $dowhat == "1" )); then
+  clear
+  bash start.sh
+elif(( $dowhat == "2" )); then
+  clear
+  bash just-3d.sh
+elif(( $dowhat == "3" )); then
+  clear
+  bash eye-in.sh
+fi
